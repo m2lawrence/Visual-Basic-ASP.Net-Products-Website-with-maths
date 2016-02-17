@@ -1,0 +1,102 @@
+﻿body {
+	font-family: Verdana, Arial, sans-serif;
+	background-image: url('images/wetgrass.jpg');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}   /* Body tag goes first as it is the first thing to get edited. */
+/*-------------------------------------*/
+#Containerwhole {
+	position: absolute;
+	width: 960px;
+	height:560px;
+	margin: 0px auto;
+    top: 37px;
+    left: 12px;
+}
+/*-------------------------------------*/
+
+/*The @media rule allows different style rules for different media in the same style sheet.*/
+@media screen
+   {
+   p.test {font-family: verdana,sans-serif;font-size:14px;}
+   } /* This tells the browser to display a 14 pixels Verdana font on the screen.*/
+@media print
+   {
+   p.test {font-family: times,serif;font-size:10px;}
+   }   /* But if the page is printed, it will be in a 10 pixels Times font.*/
+@media screen,print
+   {
+   p.test {font-weight: bold;}
+   }   /* The font-weight is set to bold, both on screen and on paper.*/
+ 
+/*---All unorganized links---*/
+ul	{
+	font-weight: bold;
+	list-style-type:none;
+	} 
+	
+/*--Middle box tree picture--*/
+.middle_box{
+	position: absolute;
+	left: 189px;
+	top: 9px;
+	width: 715px;
+	margin-right: 75px;
+	height:180px;
+	background:url(images/center_box_bg.gif) no-repeat center;
+}
+/*--------------------------------------------------------------------*/
+
+/*--Digital Clock--*/
+#MyClock {
+	position: absolute;
+	left: 28px;
+	top: 153px;
+	color:yellow;  
+	background-color:#008000;
+	}
+/*-------------------------------------*/ 
+
+/*---Main text box with grey border--*/
+#MainText {
+	position: absolute;
+	left: 216px;
+	top: 189px;
+    width: 999px;    /*--- WIDTH OF BOX!! --*/
+	/*---height:292px;     HEIGHT OF BOX!! --*/
+	margin-right: 75px;
+	padding:10px;
+	border:5px solid gray;
+	margin:0px 0px 0px 3px;
+	background-color:#6B8E23;
+}
+/*-------------------------------------*/ 
+
+/*-- This is my writing. --*/
+.yellow {
+	color: yellow;  
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:5px;
+	padding-left:5px;
+	text-align: left;
+	font-size:0.875em; /* 14px/16=0.875em */
+	}
+/*-------------------------------------*/ 
+
+/*--Scrolling text at top--*/
+marquee{
+	color:yellow; 
+	font-size:0.875em; /* 14px/16=0.875em */
+	}
+/*-------------------------------------*/ 
+
+/*-- This is my Heading 1. --*/
+h1 {
+	position: absolute;
+	left: 100px;
+	top: 40px;
+	text-decoration:underline; 
+	color:purple;
+	} 
+/*-------------------------------------*/ 

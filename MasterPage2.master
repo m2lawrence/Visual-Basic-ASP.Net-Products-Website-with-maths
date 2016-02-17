@@ -1,0 +1,78 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage2.master.vb" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+      
+    <link href="home1.css" rel="stylesheet" />
+    <meta name="description" content="Truecan Ltd" />
+ <meta name="keywords" content="IT Services, Software" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 210px;
+            height: 240px;
+        }
+    </style>
+    </head>
+<body onload="startTime()">
+    <form id="form1" runat="server">
+    <div>
+
+ <marquee>Truecan Ltd</marquee>
+        <br /> 
+
+ <script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('MyClock').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+
+
+
+<div id="Containerwhole">			
+
+<div class="middle_box">
+     <div style="position: absolute; margin-top: 70px; margin-left: 114px; "> <asp:Label ID="LblHeader" runat="server" Font-Bold="True" ForeColor="#AE11AA"></asp:Label> </div>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <div id="MyClock">
+</div>
+<!-- My clock. -->
+     
+</div>
+
+<div id="MainText">
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+</div>
+
+    <br />
+
+    <img alt="" class="auto-style1" src="images/Truecan.jpg" /></div>
+
+        
+    </div>
+    </form>
+</body>
+</html>
